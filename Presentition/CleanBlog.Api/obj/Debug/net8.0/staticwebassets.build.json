@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "CIXb0ftCwZ0BOBFNFuWw2RpTCfLsE3NLT0TbjpuQ8HE=",
+  "Source": "CleanBlog.Api",
+  "BasePath": "_content/CleanBlog.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CleanBlog.Api\\wwwroot",
+      "Source": "CleanBlog.Api",
+      "ContentRoot": "C:\\Users\\rusla\\OneDrive\\Sənədlər\\full-stack\\Clean Blog\\CleanBlogApi\\Presentition\\CleanBlog.Api\\wwwroot\\",
+      "BasePath": "_content/CleanBlog.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
