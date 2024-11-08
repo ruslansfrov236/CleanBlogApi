@@ -8,17 +8,19 @@ using System.Threading.Tasks;
 
 namespace CleanBlog.App.Validators
 {
-    public class CreateAboutValidator:AbstractValidator<CreateAboutDto>
+    public class CreateAboutValidator:AbstractValidator<UpdateAboutDto>
     {
         public CreateAboutValidator()
         {
-            RuleFor(a=>a.Description)
+            RuleFor(a => a.Description)
                 .NotEmpty()
-                .NotNull()
                 .WithMessage("Please do not enter blank information.")
-                .MaximumLength(150)
+                .MaximumLength(250)
+                .WithMessage("Please enter information between maximum 250 characters.")
                 .MinimumLength(4)
-                .WithMessage("Please enter information between 4 and 150 characters.");
+                .WithMessage("Please enter information between minimum 4 characters.");
+
+
         }
     }
 }

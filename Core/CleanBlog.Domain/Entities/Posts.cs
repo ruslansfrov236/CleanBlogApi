@@ -15,8 +15,8 @@ namespace CleanBlog.Domain.Entities
 
         public string Content { get; set; } 
 
-        public bool isActiveRead { get; set; }  
+        public List<PostRead> PostReads { get; set; }
 
-        public DateTime ReadTime { get; set; }  
+       
     }
 }

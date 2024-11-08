@@ -1,0 +1,20 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\image\156a96f6-b9f8-414e-9e7a-291a2a20a9a2_WhatsApp Image 2024-11-01 at 12.07.08_360447cf.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>CleanBlog.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CleanBlog.Api</BasePath>
+      <RelativePath>assets/image/156a96f6-b9f8-414e-9e7a-291a2a20a9a2_WhatsApp Image 2024-11-01 at 12.07.08_360447cf.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\image\156a96f6-b9f8-414e-9e7a-291a2a20a9a2_WhatsApp Image 2024-11-01 at 12.07.08_360447cf.png))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>

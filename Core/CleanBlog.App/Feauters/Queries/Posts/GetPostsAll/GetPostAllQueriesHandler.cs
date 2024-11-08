@@ -23,7 +23,8 @@ namespace CleanBlog.App.Feauters.Queries.Posts.GetPostsAll
                 {
                     Success = true,
                     Message=string.Empty,
-                    Posts=post
+                    Posts=post,
+                    PostCount=post.Count(),
 
                 };
             }

@@ -34,13 +34,19 @@ namespace CleanBlog.Persistence
             services.AddScoped<IMessageWriteRepository, MessageWriteRepository>();
             services.AddScoped<IPostReadRepository, PostReadRepository>();
             services.AddScoped<IPostWriteRepository, PostsWriteRepository>();
+            services.AddScoped<IPostReadReadRepository , PostReadReadRepository>();
+            services.AddScoped<IPostReadWriteRepository, PostReadWriteRepository>();
+          
+
 
 
             services.AddScoped<IAboutService, AboutService>();
             services.AddScoped<IHeaderService, HeaderService>();
             services.AddScoped<IMessageService, MessageService>();
             services.AddScoped<IContactsDescriptionService, ContactsDescriptionService>();
+            services.AddScoped<IPostReadService, PostReadService>();
             services.AddScoped<IPostsService, PostService>();
+            
         }
 
     }

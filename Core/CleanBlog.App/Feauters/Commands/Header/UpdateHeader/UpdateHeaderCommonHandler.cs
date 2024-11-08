@@ -16,16 +16,26 @@ namespace CleanBlog.App.Feauters.Commands.Header.UpdateHeader
 
         public async Task<UpdateHeaderCommonResponse> Handle(UpdateHeaderCommonRequest request, CancellationToken cancellationToken)
         {
-         
+
 
             try
             {
-                await _headerService.Update(request.UpdateHeaderDto);
+                await _headerService.Update(new Dto_s.Header.UpdateHeaderDto()
+                {
+                    Id=request.Id,
+                    Description=request.Description,    
+                   
+                    PageNumber=request.PageNumber,
+                    FileName=request.FileName,
+                    Title=request.Title,
+                    formFile=request.File
+                });
+
 
                 return new UpdateHeaderCommonResponse()
                 {
-                    Success= true,
-                    Message= "Header updated successfully."
+                    Success = true,
+                    Message = "Header updated successfully."
                 };
 
             }
@@ -36,7 +46,7 @@ namespace CleanBlog.App.Feauters.Commands.Header.UpdateHeader
                     Success = false,
                     Message = ex.Message
                 };
-                
+
 
             }
         }

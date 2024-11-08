@@ -13,15 +13,24 @@ namespace CleanBlog.App.Feauters.Commands.Header.CreateHeader
     {
         readonly private IHeaderService _headerService;
 
-        public CreateHeaderCommonHandler(IHeaderService headerService)=> _headerService = headerService;    
-       
+        public CreateHeaderCommonHandler(IHeaderService headerService) => _headerService = headerService;
+
         public async Task<CreateHeaderCommonResponse> Handle(CreateHeaderCommonRequest request, CancellationToken cancellationToken)
         {
-           
+
             try
             {
-                await _headerService.Create(request.CreateHeaderDto);
-        
+                await _headerService.Create(new Dto_s.Header.CreateHeaderDto()
+                {
+                    Description = request.Description,
+                   
+                    PageNumber = request.PageNumber,
+                    FileName = request.FileName,
+                    Title = request.Title,
+                    formFile=request.File
+
+                });
+
                 return new CreateHeaderCommonResponse
                 {
 
@@ -31,7 +40,7 @@ namespace CleanBlog.App.Feauters.Commands.Header.CreateHeader
             }
             catch (Exception ex)
             {
-                // Hata loglama veya özel hata işleme
+             
                 return new CreateHeaderCommonResponse
                 {
                     Success = false,

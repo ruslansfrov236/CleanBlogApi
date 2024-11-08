@@ -152,7 +152,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.String",
         "IsRequired": true
       }
@@ -184,9 +184,29 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "createHeaderCommonRequest",
-        "Type": "CleanBlog.App.Feauters.Commands.Header.CreateHeader.CreateHeaderCommonRequest",
-        "IsRequired": true
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -200,9 +220,34 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "updateHeaderCommonRequest",
-        "Type": "CleanBlog.App.Feauters.Commands.Header.UpdateHeader.UpdateHeaderCommonRequest",
-        "IsRequired": true
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -232,7 +277,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.String",
         "IsRequired": true
       }
@@ -265,6 +310,86 @@
     "Method": "Index",
     "RelativePath": "api/Message/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanBlog.Api.Controllers.PostReadController",
+    "Method": "Index",
+    "RelativePath": "api/PostRead",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getPostReadAllQueriesRequest",
+        "Type": "CleanBlog.App.Feauters.Queries.PostRead.GetPostReadAll.GetPostReadAllQueriesRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanBlog.Api.Controllers.PostReadController",
+    "Method": "Create",
+    "RelativePath": "api/PostRead",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPostReadCommonRequest",
+        "Type": "CleanBlog.App.Feauters.Commands.PostRead.CreatePostRead.CreatePostReadCommonRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanBlog.Api.Controllers.PostReadController",
+    "Method": "Update",
+    "RelativePath": "api/PostRead",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePostReadCommonRequest",
+        "Type": "CleanBlog.App.Feauters.Commands.PostRead.UpdatePostRead.UpdatePostReadCommonRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanBlog.Api.Controllers.PostReadController",
+    "Method": "Index",
+    "RelativePath": "api/PostRead/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanBlog.Api.Controllers.PostReadController",
+    "Method": "Delete",
+    "RelativePath": "api/PostRead/delete/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -354,7 +479,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.String",
         "IsRequired": true
       }

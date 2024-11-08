@@ -10,6 +10,7 @@ namespace CleanBlog.App.Feauters.Commands.About.UpdateAbout
 {
     public class UpdateAboutCommonRequest:IRequest<UpdateAboutCommonResponse>
     {
-        public UpdateAboutDto UpdateAboutDto { get; set; }
+        public string Id{ get; set; }
+        public string Description{ get; set; }
     }
 }

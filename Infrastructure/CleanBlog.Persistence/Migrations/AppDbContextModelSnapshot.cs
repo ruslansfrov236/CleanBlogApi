@@ -91,6 +91,33 @@ namespace CleanBlog.Persistence.Migrations
                     b.ToTable("Headers");
                 });
 
+            modelBuilder.Entity("CleanBlog.Domain.Entities.HeaderImage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("HeaderId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HeaderId")
+                        .IsUnique();
+
+                    b.ToTable("HeaderImage");
+                });
+
             modelBuilder.Entity("CleanBlog.Domain.Entities.Message", b =>
                 {
                     b.Property<Guid>("Id")
@@ -122,6 +149,34 @@ namespace CleanBlog.Persistence.Migrations
                     b.ToTable("Message");
                 });
 
+            modelBuilder.Entity("CleanBlog.Domain.Entities.PostRead", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("PostsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("ReadTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("isActiveRead")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PostsId");
+
+                    b.ToTable("PostRead");
+                });
+
             modelBuilder.Entity("CleanBlog.Domain.Entities.Posts", b =>
                 {
                     b.Property<Guid>("Id")
@@ -139,9 +194,6 @@ namespace CleanBlog.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("ReadTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -149,12 +201,42 @@ namespace CleanBlog.Persistence.Migrations
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("isActiveRead")
-                        .HasColumnType("bit");
-
                     b.HasKey("Id");
 
                     b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("CleanBlog.Domain.Entities.HeaderImage", b =>
+                {
+                    b.HasOne("CleanBlog.Domain.Entities.Header", "Header")
+                        .WithOne("HeaderImage")
+                        .HasForeignKey("CleanBlog.Domain.Entities.HeaderImage", "HeaderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Header");
+                });
+
+            modelBuilder.Entity("CleanBlog.Domain.Entities.PostRead", b =>
+                {
+                    b.HasOne("CleanBlog.Domain.Entities.Posts", "Posts")
+                        .WithMany("PostReads")
+                        .HasForeignKey("PostsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Posts");
+                });
+
+            modelBuilder.Entity("CleanBlog.Domain.Entities.Header", b =>
+                {
+                    b.Navigation("HeaderImage")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CleanBlog.Domain.Entities.Posts", b =>
+                {
+                    b.Navigation("PostReads");
                 });
 #pragma warning restore 612, 618
         }

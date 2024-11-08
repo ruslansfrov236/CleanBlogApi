@@ -18,7 +18,10 @@ namespace CleanBlog.App.Feauters.Commands.ContactDescription.CreateContactDescri
         {
             try
             {
-                await _contactsDescriptionService.Create(request.CreateContactsDescriptionDto);
+                await _contactsDescriptionService.Create( new Dto_s.ContactsDescription.CreateContactsDescriptionDto()
+                {
+                    Description=request.Description,
+                });
                 return new CreateContactDescriptionCommonResponse()
                 {
                     Success = true,

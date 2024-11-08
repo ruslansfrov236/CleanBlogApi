@@ -2,7 +2,8 @@
 using CleanBlog.App.Dto_s.Message;
 using CleanBlog.App.Repository;
 using CleanBlog.Domain.Entities;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
+
 namespace CleanBlog.Persistence.Services
 {
     public class MessageService : IMessageService

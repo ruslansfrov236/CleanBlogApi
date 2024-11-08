@@ -10,6 +10,7 @@ namespace CleanBlog.App.Feauters.Commands.ContactDescription.CreateContactDescri
 {
     public class CreateContactDescriptionCommonRequest:IRequest<CreateContactDescriptionCommonResponse>
     {
-        public CreateContactsDescriptionDto CreateContactsDescriptionDto { get; set; }
+
+        public string? Description { get; set; }
     }
 }

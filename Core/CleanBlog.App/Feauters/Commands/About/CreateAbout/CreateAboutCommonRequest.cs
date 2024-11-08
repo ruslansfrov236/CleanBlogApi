@@ -5,6 +5,6 @@ namespace CleanBlog.App.Feauters.Commands.About.CreateAbout
 {
     public class CreateAboutCommonRequest : IRequest<CreateAboutCommonResponse>
     {
-       public CreateAboutDto CreateAboutDto { get; set; }   
+       public string Description{ get; set; }   
     }
 }

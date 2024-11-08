@@ -21,7 +21,7 @@ namespace CleanBlog.App.Feauters.Commands.About.UpdateAbout
 
             try
             {
-                await _aboutService.Update(request.UpdateAboutDto);
+                await _aboutService.Update(new Dto_s.About.UpdateAboutDto() {Id=request.Id, Description = request.Description });
                 return new UpdateAboutCommonResponse()
                 {
                     Success = true,

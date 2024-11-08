@@ -13,6 +13,7 @@ C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Infrastru
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Infrastructure\CleanBlog.Persistence\obj\Debug\net8.0\CleanBlog.Persistence.AssemblyInfoInputs.cache
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Infrastructure\CleanBlog.Persistence\obj\Debug\net8.0\CleanBlog.Persistence.AssemblyInfo.cs
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Infrastructure\CleanBlog.Persistence\obj\Debug\net8.0\CleanBlog.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Infrastructure\CleanBlog.Persistence\obj\Debug\net8.0\CleanBlog.Persistence.sourcelink.json
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Infrastructure\CleanBlog.Persistence\obj\Debug\net8.0\CleanBlo.B290CAB7.Up2Date
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Infrastructure\CleanBlog.Persistence\obj\Debug\net8.0\CleanBlog.Persistence.dll
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Infrastructure\CleanBlog.Persistence\obj\Debug\net8.0\refint\CleanBlog.Persistence.dll

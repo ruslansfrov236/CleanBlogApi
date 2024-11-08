@@ -25,8 +25,9 @@
   </ItemGroup>
 
 	<ItemGroup>
-    <ProjectReference Include="..\..\CleanBlog.Domain\CleanBlog.Domain.csproj" />
-    <ProjectReference Include="..\CleanBlog.Domain\CleanBlog.Domain.csproj" />
+		<ProjectReference Include="..\CleanBlog.Domain\CleanBlog.Domain.csproj" />
+
+		<ProjectReference Include="..\CleanBlog.Domain\CleanBlog.Domain.csproj" />
   </ItemGroup>
 
 </Project>

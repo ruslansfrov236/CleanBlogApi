@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CIXb0ftCwZ0BOBFNFuWw2RpTCfLsE3NLT0TbjpuQ8HE=",
+  "Hash": "OG1w82aH17Gtr71lXcQNjcAmTH5vj0kFc/EYeXOexCw=",
   "Source": "CleanBlog.Api",
   "BasePath": "_content/CleanBlog.Api",
   "Mode": "Default",
@@ -15,5 +15,25 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\rusla\\OneDrive\\Sənədlər\\full-stack\\Clean Blog\\CleanBlogApi\\Presentition\\CleanBlog.Api\\wwwroot\\assets\\image\\156a96f6-b9f8-414e-9e7a-291a2a20a9a2_WhatsApp Image 2024-11-01 at 12.07.08_360447cf.png",
+      "SourceId": "CleanBlog.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rusla\\OneDrive\\Sənədlər\\full-stack\\Clean Blog\\CleanBlogApi\\Presentition\\CleanBlog.Api\\wwwroot\\",
+      "BasePath": "_content/CleanBlog.Api",
+      "RelativePath": "assets/image/156a96f6-b9f8-414e-9e7a-291a2a20a9a2_WhatsApp Image 2024-11-01 at 12.07.08_360447cf.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\image\\156a96f6-b9f8-414e-9e7a-291a2a20a9a2_WhatsApp Image 2024-11-01 at 12.07.08_360447cf.png"
+    }
+  ]
 }

@@ -3330,9 +3330,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\rusla\\OneDrive\\Sənədlər\\full-stack\\Clean Blog\\CleanBlogApi\\CleanBlog.Domain\\CleanBlog.Domain.csproj": {
-              "projectPath": "C:\\Users\\rusla\\OneDrive\\Sənədlər\\full-stack\\Clean Blog\\CleanBlogApi\\CleanBlog.Domain\\CleanBlog.Domain.csproj"
-            },
             "C:\\Users\\rusla\\OneDrive\\Sənədlər\\full-stack\\Clean Blog\\CleanBlogApi\\Core\\CleanBlog.Domain\\CleanBlog.Domain.csproj": {
               "projectPath": "C:\\Users\\rusla\\OneDrive\\Sənədlər\\full-stack\\Clean Blog\\CleanBlogApi\\Core\\CleanBlog.Domain\\CleanBlog.Domain.csproj"
             }

@@ -22,7 +22,14 @@ namespace CleanBlog.App.Feauters.Commands.Posts.UpdatePosts
         {
             try
             {
-                await _postsService.Update(request.UpdatePostDto);
+                await _postsService.Update(new Dto_s.Posts.UpdatePostDto()
+                {
+                    Id=request.Id,
+                    Description=request.Description,
+                    Content=request.Content,
+                    Title=request.Title,    
+
+                });
 
                 return new UpdatePostsCommonResponse()
                 {

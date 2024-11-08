@@ -5015,8 +5015,8 @@
     },
     "CleanBlog.Domain/1.0.0": {
       "type": "project",
-      "path": "../../CleanBlog.Domain/CleanBlog.Domain.csproj",
-      "msbuildProject": "../../CleanBlog.Domain/CleanBlog.Domain.csproj"
+      "path": "../../Core/CleanBlog.Domain/CleanBlog.Domain.csproj",
+      "msbuildProject": "../../Core/CleanBlog.Domain/CleanBlog.Domain.csproj"
     },
     "CleanBlog.Infrastructure/1.0.0": {
       "type": "project",

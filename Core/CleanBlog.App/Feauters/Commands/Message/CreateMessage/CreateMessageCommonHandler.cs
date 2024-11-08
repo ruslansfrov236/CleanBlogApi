@@ -18,7 +18,12 @@ namespace CleanBlog.App.Feauters.Commands.Message.CreateMessage
         {
             try
             {
-                await _messageService.Create(request.CreateMessageDto);
+                await _messageService.Create( new Dto_s.Message.CreateMessageDto(){
+                    Email = request.Email,
+                    Name = request.Name,
+                    Messages= request.Messages,
+                    Phone= request.Phone,   
+                });
                 return new CreateMessageCommonResponse()
                 {
                     Success = true,

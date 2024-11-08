@@ -1,22 +1,25 @@
 ﻿using CleanBlog.App.Applications;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Png;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace CleanBlog.Infrastructure.Applications
 {
     public class StorageService : IStorageService
     {
-        public bool CheckSize(IFormFile file, int maxSize)
+        private readonly IWebHostEnvironment _env;
+
+        public StorageService(IWebHostEnvironment env)
         {
-            if (file.Length / 1024 < maxSize)
-            {
-
-
-                return false;
-            }
-            return true;
+            _env = env;
         }
+
+        public bool CheckSize(IFormFile file, int maxSize)
+        => (file.Length / 1024) > maxSize;
 
         public void Delete(string path)
         {
@@ -27,52 +30,38 @@ namespace CleanBlog.Infrastructure.Applications
         public bool IsImage(IFormFile file)
         {
             if (file == null || file.Length == 0)
-            {
-
-
                 return false;
-
-            }
-
 
             if (!file.ContentType.StartsWith("image/"))
-            {
-
                 return false;
-            }
-
 
             var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
             var fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
-            if (!allowedExtensions.Contains(fileExtension))
-            {
-
-                return false;
-            }
-
-            return true;
+            return allowedExtensions.Contains(fileExtension);
         }
 
         public async Task<string> UploadAsync(IFormFile file)
         {
-            var filename = $"{Guid.NewGuid()}_{file.FileName}";
+            var filename = $"{Guid.NewGuid()}_{Path.GetFileNameWithoutExtension(file.FileName)}.png";
+            var tempPath = Path.Combine(_env.WebRootPath, "assets/image/temp_" + file.FileName);
+            var pngPath = Path.Combine(_env.WebRootPath, "assets/image", filename);
 
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "../../wwwroot/assets/image/", filename);
-            var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "../../wwwroot/assets/image/", filename);
-            var pngPath = Path.ChangeExtension(imagePath, "png");
-            using (FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.ReadWrite))
+           
+            using (var fileStream = new FileStream(tempPath, FileMode.Create, FileAccess.Write))
             {
                 await file.CopyToAsync(fileStream);
             }
-            using (var image = Image.Load(imagePath))
+
+           
+            using (var image = await Image.LoadAsync(tempPath))
             {
-                image.Save(pngPath, new PngEncoder());
+                await image.SaveAsync(pngPath, new PngEncoder());
             }
 
+           
+            File.Delete(tempPath);
 
-            File.Delete(imagePath);
-
-            return Path.GetFileName(pngPath);
+            return filename;
         }
     }
 }

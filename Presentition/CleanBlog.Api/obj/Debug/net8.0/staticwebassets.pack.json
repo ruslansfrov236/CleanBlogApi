@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\rusla\\OneDrive\\Sənədlər\\full-stack\\Clean Blog\\CleanBlogApi\\Presentition\\CleanBlog.Api\\wwwroot\\assets\\image\\156a96f6-b9f8-414e-9e7a-291a2a20a9a2_WhatsApp Image 2024-11-01 at 12.07.08_360447cf.png",
+      "PackagePath": "staticwebassets\\assets\\image\\156a96f6-b9f8-414e-9e7a-291a2a20a9a2_WhatsApp Image 2024-11-01 at 12.07.08_360447cf.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CleanBlog.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CleanBlog.Api.props",
+      "PackagePath": "build\\CleanBlog.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CleanBlog.Api.props",
+      "PackagePath": "buildMultiTargeting\\CleanBlog.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CleanBlog.Api.props",
+      "PackagePath": "buildTransitive\\CleanBlog.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

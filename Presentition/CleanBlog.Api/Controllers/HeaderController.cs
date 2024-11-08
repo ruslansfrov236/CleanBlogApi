@@ -4,7 +4,6 @@ using CleanBlog.App.Feauters.Commands.Header.UpdateHeader;
 using CleanBlog.App.Feauters.Queries.Header.GetHeaderAll;
 using CleanBlog.App.Feauters.Queries.Header.GetHeaderById;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanBlog.Api.Controllers
@@ -15,7 +14,10 @@ namespace CleanBlog.Api.Controllers
     {
         readonly private IMediator _mediator;
 
-        public HeaderController(IMediator mediator)=> _mediator = mediator;
+        public HeaderController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
 
         [HttpGet]
         public async Task<IActionResult> Index([FromQuery] GetHeaderAllQueriesRequest getHeaderAllQueriesRequest)
@@ -31,14 +33,14 @@ namespace CleanBlog.Api.Controllers
             return Ok(getHeaderByIdQueriuesResponse);
         }
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody]CreateHeaderCommonRequest createHeaderCommonRequest)
+        public async Task<IActionResult> Create( CreateHeaderCommonRequest createHeaderCommonRequest)
         {
             CreateHeaderCommonResponse createHeaderCommonResponse = await _mediator.Send(createHeaderCommonRequest);
 
             return Ok(createHeaderCommonResponse);
         }
         [HttpPut]
-        public async Task<IActionResult> Update([FromBody] UpdateHeaderCommonRequest  updateHeaderCommonRequest)
+        public async Task<IActionResult> Update([FromForm] UpdateHeaderCommonRequest  updateHeaderCommonRequest)
         {
             UpdateHeaderCommonResponse updateHeaderCommonResponse = await _mediator.Send(updateHeaderCommonRequest);
 

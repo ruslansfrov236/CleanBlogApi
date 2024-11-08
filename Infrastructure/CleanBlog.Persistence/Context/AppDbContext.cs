@@ -19,6 +19,9 @@ namespace CleanBlog.Persistence.Context
 
         public DbSet<ContactsDescription> Contacts { get; set; }
 
+        public DbSet<PostRead> PostRead { get; set; }   
+
+       
 
         
 

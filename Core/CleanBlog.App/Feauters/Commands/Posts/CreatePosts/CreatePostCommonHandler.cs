@@ -20,7 +20,12 @@ namespace CleanBlog.App.Feauters.Commands.Posts.CreatePosts
         {
             try
             {
-                await _postsService.Create(request.CreatePostDto);
+                await _postsService.Create(new Dto_s.Posts.CreatePostDto()
+                {
+                    Content = request.Content,
+                    Description = request.Description,
+                    Title = request.Title,  
+                });
                 return new CreatePostCommonResponse
                 {
                    

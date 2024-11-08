@@ -10,6 +10,8 @@ namespace CleanBlog.App.Feauters.Commands.ContactDescription.UpdateContactDescri
 {
     public class UpdateContactDescriptionCommondsRequest:IRequest<UpdateContactDescriptionCommandsResponse>
     {
-        public UpdateContactsDescriptionDto UpdateContactsDescriptionDto { get; set; }
+
+        public string Id { get; set; }
+        public string? Description { get; set; }
     }
 }

@@ -2,12 +2,7 @@
 using CleanBlog.App.Dto_s.About;
 using CleanBlog.App.Repository;
 using CleanBlog.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace CleanBlog.Persistence.Services
 {
@@ -46,7 +41,7 @@ namespace CleanBlog.Persistence.Services
 
         public async Task<List<About>> GetAll()
         {
-            List<About> abouts = _aboutReadRepository.GetAll().ToList();
+            List<About> abouts = await _aboutReadRepository.GetAll().ToListAsync();
 
             return abouts;
         }
@@ -57,7 +52,7 @@ namespace CleanBlog.Persistence.Services
         public async Task<bool> Update(UpdateAboutDto model)
         {
             About about = new About();
-
+            about.Id =Guid.Parse(model.Id);
             about.Description=model.Description;
 
            _aboutWriteRepository.Update(about);

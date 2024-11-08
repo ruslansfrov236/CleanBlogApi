@@ -81,8 +81,6 @@ namespace CleanBlog.Persistence.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    isActiveRead = table.Column<bool>(type: "bit", nullable: false),
-                    ReadTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -90,6 +88,33 @@ namespace CleanBlog.Persistence.Migrations
                 {
                     table.PrimaryKey("PK_Posts", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "PostRead",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    isActiveRead = table.Column<bool>(type: "bit", nullable: false),
+                    ReadTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    PostsId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PostRead", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PostRead_Posts_PostsId",
+                        column: x => x.PostsId,
+                        principalTable: "Posts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PostRead_PostsId",
+                table: "PostRead",
+                column: "PostsId");
         }
 
         /// <inheritdoc />
@@ -106,6 +131,9 @@ namespace CleanBlog.Persistence.Migrations
 
             migrationBuilder.DropTable(
                 name: "Message");
+
+            migrationBuilder.DropTable(
+                name: "PostRead");
 
             migrationBuilder.DropTable(
                 name: "Posts");

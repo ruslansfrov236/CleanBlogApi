@@ -28,8 +28,7 @@ namespace CleanBlog.Persistence.Services
             Title = model.Title,
             Content = model.Content,
             Description= model.Description,
-            isActiveRead=model.isActiveRead,
-            ReadTime=model.ReadTime,
+          
             
             };
             await _postWriteRepository.AddAsync(posts);
@@ -61,7 +60,9 @@ namespace CleanBlog.Persistence.Services
 
         public async Task<bool> Update(UpdatePostDto model)
         {
+
             Posts posts = new Posts();
+            posts.Id = Guid.Parse(model.Id);
             posts.Title = model.Title;
             posts.Content = model.Content;
             posts.Description = model.Description;

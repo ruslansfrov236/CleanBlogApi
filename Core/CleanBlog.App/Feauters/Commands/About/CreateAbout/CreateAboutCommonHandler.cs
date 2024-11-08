@@ -18,7 +18,8 @@ namespace CleanBlog.App.Feauters.Commands.About.CreateAbout
 
             try
             {
-                await _aboutService.Create(request.CreateAboutDto);
+                await _aboutService.Create(new Dto_s.About.CreateAboutDto() { Description=request.Description });
+
 
                 return new CreateAboutCommonResponse()
                 {
@@ -30,7 +31,7 @@ namespace CleanBlog.App.Feauters.Commands.About.CreateAbout
 
                 return new CreateAboutCommonResponse()
                 {
-                    Success = true,
+                    Success = false,
                     Message = ex.Message    
                 };
             }

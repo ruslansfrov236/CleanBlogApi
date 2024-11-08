@@ -22,3 +22,4 @@ C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Core\Clea
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Core\CleanBlog.Domain\obj\Debug\net8.0\refint\CleanBlog.Domain.dll
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Core\CleanBlog.Domain\obj\Debug\net8.0\CleanBlog.Domain.pdb
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Core\CleanBlog.Domain\obj\Debug\net8.0\ref\CleanBlog.Domain.dll
+C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Core\CleanBlog.Domain\obj\Debug\net8.0\CleanBlog.Domain.sourcelink.json

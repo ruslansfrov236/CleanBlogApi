@@ -61,9 +61,9 @@ namespace CleanBlog.Persistence.Repository
 
         public bool Update(T model)
         {
-            EntityEntry entityEntry= _context.Update(model);    
+            EntityEntry entityEntry= _context.Update(model);
 
-            return entityEntry.State== EntityState.Modified;    
+            return entityEntry.State == EntityState.Modified;    
         }
     }
 }

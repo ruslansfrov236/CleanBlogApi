@@ -1071,6 +1071,17 @@
           }
         }
       },
+      "CleanBlog.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17"
+        },
+        "runtime": {
+          "CleanBlog.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "CleanBlog.Infrastructure/1.0.0": {
         "dependencies": {
           "CleanBlog.App": "1.0.0",
@@ -1758,6 +1769,11 @@
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
     "CleanBlog.App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CleanBlog.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

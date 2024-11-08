@@ -17,8 +17,7 @@ namespace CleanBlog.App.Dto_s.Header
         public string? FileName { get; set; }
 
         public int? PageNumber { get; set; }
-
         [NotMapped]
-        public IFormFile? File { get; set; }
+        public IFormFile formFile { get; set; }
     }
 }

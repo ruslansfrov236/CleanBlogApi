@@ -10,6 +10,12 @@ namespace CleanBlog.App.Feauters.Commands.Message.CreateMessage
 {
     public class CreateMessageCommonRequest:IRequest<CreateMessageCommonResponse>
     {
-        public CreateMessageDto CreateMessageDto { get; set; }
+        public string Name { get; set; }
+
+        public string? Email { get; set; }
+
+        public string? Phone { get; set; }
+
+        public string Messages { get; set; }
     }
 }

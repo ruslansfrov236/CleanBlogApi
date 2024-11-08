@@ -17,6 +17,8 @@ C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentit
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\MediatR.dll
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -48,6 +50,8 @@ C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentit
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\SixLabors.ImageSharp.dll
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -145,6 +149,7 @@ C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentit
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\obj\Debug\net8.0\CleanBlog.Api.csproj.CoreCompileInputs.cache
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\obj\Debug\net8.0\CleanBlog.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\obj\Debug\net8.0\CleanBlog.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\obj\Debug\net8.0\CleanBlog.Api.sourcelink.json
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\rusla\OneDrive\Sənədlər\full-stack\Clean Blog\CleanBlogApi\Presentition\CleanBlog.Api\obj\Debug\net8.0\staticwebassets\msbuild.CleanBlog.Api.Microsoft.AspNetCore.StaticWebAssets.props

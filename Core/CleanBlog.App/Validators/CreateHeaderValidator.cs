@@ -34,18 +34,8 @@ namespace CleanBlog.App.Validators
                 .WithMessage("Page number must be unique.")
                 .LessThanOrEqualTo(150)
                 .WithMessage("Page number cannot exceed 150.");
-            RuleFor(a => a.File)
-                        .NotNull()
-                        .WithMessage("Please upload a file.")
-                        .Must(file => file.Length > 0)
-                        .WithMessage("The file cannot be empty.")
-                        .Must(file => file.Length <= 1 * 1024 * 1024) 
-                        .WithMessage("The file size cannot exceed 5 MB.")
-                        .Must(file =>
-                        file.ContentType == "image/jpg" ||
-                        file.ContentType == "image/jpeg" ||
-                        file.ContentType == "image/png")
-                       .WithMessage("Only  JPG ,JPEG, and PNG files are allowed.");
+           
+                       
 
         }
 

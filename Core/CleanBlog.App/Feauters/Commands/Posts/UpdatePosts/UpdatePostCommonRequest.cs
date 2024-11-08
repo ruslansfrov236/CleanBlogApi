@@ -10,6 +10,11 @@ namespace CleanBlog.App.Feauters.Commands.Posts.UpdatePosts
 {
     public class UpdatePostCommonRequest:IRequest<UpdatePostsCommonResponse>
     {
-        public UpdatePostDto UpdatePostDto { get; set; }    
+        public string Id { get; set; }  
+        public string Title { get; set; }
+
+        public string Description { get; set; }
+
+        public string Content { get; set; }
     }
 }

@@ -13,5 +13,7 @@ namespace CleanBlog.App.Feauters.Queries.Posts.GetPostsAll
         public string Message { get; set; } 
 
         public object Posts { get; set; }   
+
+        public int  PostCount { get; set; } 
     }
 }

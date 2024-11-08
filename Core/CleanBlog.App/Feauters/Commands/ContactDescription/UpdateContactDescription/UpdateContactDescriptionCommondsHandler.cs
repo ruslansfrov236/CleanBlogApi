@@ -18,7 +18,11 @@ namespace CleanBlog.App.Feauters.Commands.ContactDescription.UpdateContactDescri
         {
             try
             {
-                await _contactsDescriptionService.Update(request.UpdateContactsDescriptionDto);
+                await _contactsDescriptionService.Update(new Dto_s.ContactsDescription.UpdateContactsDescriptionDto() {
+                Id=request.Id,
+                Description=request.Description,    
+                
+                });
                 return new UpdateContactDescriptionCommandsResponse()
                 {
                     Success = true,

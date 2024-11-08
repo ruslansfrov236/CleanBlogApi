@@ -15,6 +15,9 @@ namespace CleanBlog.Api.Controllers
     public class ContactDescriptionController : ControllerBase
     {
         readonly private IMediator _mediator;
+
+        public ContactDescriptionController(IMediator mediator)=> _mediator=mediator;   
+        
         [HttpGet]
         public async Task<IActionResult> Index([FromHeader]GetContactDescriptionAllQueriuesRequest getContactDescriptionAllQueriuesRequest)
         {

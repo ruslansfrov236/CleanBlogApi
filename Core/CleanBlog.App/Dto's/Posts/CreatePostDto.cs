@@ -14,8 +14,6 @@ namespace CleanBlog.App.Dto_s.Posts
 
         public string Content { get; set; }
 
-        public bool isActiveRead { get; set; }
-
-        public DateTime ReadTime { get; set; }
+       
     }
 }

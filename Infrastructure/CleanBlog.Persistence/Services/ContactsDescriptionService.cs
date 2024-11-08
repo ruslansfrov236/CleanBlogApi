@@ -2,13 +2,8 @@
 using CleanBlog.App.Dto_s.ContactsDescription;
 using CleanBlog.App.Repository;
 using CleanBlog.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace CleanBlog.Persistence.Services
 {
@@ -44,7 +39,7 @@ namespace CleanBlog.Persistence.Services
 
         public async Task<List<ContactsDescription>> GetAll()
         {
-            List<ContactsDescription> contactsDescriptions =  _contactDescriptionReadRepository.GetAll().ToList();
+            List<ContactsDescription> contactsDescriptions = await _contactDescriptionReadRepository.GetAll().ToListAsync();
             return contactsDescriptions;
         }
 
@@ -53,7 +48,7 @@ namespace CleanBlog.Persistence.Services
 
         public async Task<bool> Update(UpdateContactsDescriptionDto model)
         {
-            _contactDescriptionWriteRepository.Update(new ContactsDescription() { Description= model.Description });
+            _contactDescriptionWriteRepository.Update(new ContactsDescription() { Id = Guid.Parse(model.Id), Description = model.Description });
 
 
             await _contactDescriptionWriteRepository.SaveAsync();
